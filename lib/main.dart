@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
-import 'counter.dart';
-import 'home_screens.dart';
+import 'model/counter.dart';
+import 'screens/home_screens.dart';
 
 void main() => runApp(
       ChangeNotifierProvider(
@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Flutter Provier',
+      title: 'Flutter Provier Screens',
       theme: ThemeData(primarySwatch: Colors.green),
       home: const HomeScreen(),
     );

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
-import 'counter.dart';
+import '/model/counter.dart';
 
 class SecondScreen extends StatelessWidget {
   const SecondScreen({Key? key}) : super(key: key);
@@ -21,16 +21,11 @@ class SecondScreen extends StatelessWidget {
               context.watch<CounterProvider>().counter.toString(),
               style: const TextStyle(fontSize: 50),
             ),
-            ElevatedButton(
-              child: const Text('Go to Home Screen'),
-              onPressed: () {
-                Navigator.pop(context);
-              },
-            ),
           ],
         ),
       ),
       floatingActionButton: FloatingActionButton(
+        backgroundColor: Colors.red,
         child: const Icon(Icons.add),
         onPressed: () {
           context.read<CounterProvider>().add();
